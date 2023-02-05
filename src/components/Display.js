@@ -5,10 +5,14 @@ import Show from "./Show";
 
 import fetchShow from '../api/fetchShow';
 
+
+
 const Display = (props) => {
   const [show, setShow] = useState(null);
   const [selectedSeason, setSelectedSeason] = useState("none");
   const { displayFunc } = props;
+
+  
 
   const handleClick = () => {
     fetchShow().then(data => {
